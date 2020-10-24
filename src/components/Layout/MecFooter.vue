@@ -7,16 +7,16 @@
                Ratione quo vero dicta eius reprehenderit, sint excepturi
                quod amet perspiciatis magni.</p>
                <ul class="flex">
-                   <li class="mr-3 p-2 transition ease-in-out duration-150 cursor-pointer hover:bg-gray-800 rounded-full">
+                   <li class="mr-3 p-2 transition ease-in-out duration-700 cursor-pointer hover:bg-gray-800 rounded-full">
                      <img class="h-6 w-6" src="~@/assets/icons/facebook.svg" alt="facebook icon">
                    </li>
-                   <li class="mr-3 p-2 transition ease-in-out duration-150 cursor-pointer hover:bg-gray-800 rounded-full">
+                   <li class="mr-3 p-2 transition ease-in-out duration-700 cursor-pointer hover:bg-gray-800 rounded-full">
                      <img class="h-6 w-6" src="~@/assets/icons/instagram.svg" alt="instagram icon">
                    </li>
-                   <li class="mr-3 p-2 transition ease-in-out duration-150 cursor-pointer hover:bg-gray-800 rounded-full">
+                   <li class="mr-3 p-2 transition ease-in-out duration-700 cursor-pointer hover:bg-gray-800 rounded-full">
                      <img class="h-6 w-6" src="~@/assets/icons/pinterest.svg" alt="pinterest icon">
                    </li>
-                   <li class="p-2 transition ease-in-out duration-150 cursor-pointer hover:bg-gray-800 rounded-full">
+                   <li class="p-2 transition ease-in-out duration-700 cursor-pointer hover:bg-gray-800 rounded-full">
                      <img class="h-6 w-6" src="~@/assets/icons/tik-tok.svg" alt="tik-tok icon">
                    </li>
                </ul>
