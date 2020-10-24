@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MecNavbar from '@/components/MecNavbar';
+import MecNavbar from '@/components/Layout/MecNavbar';
 export default {
   components:{
     MecNavbar
