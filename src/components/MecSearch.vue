@@ -1,8 +1,23 @@
 <template>
- <div v-if="this.open" class="bg-gray-400 py-5 px-10 flex items-center justify-center transition ease-out duration-75">
-   <input class="py-1 rounded-l px-3 w-full outline-none" type="text" placeholder="search ...">
-   <button class="bg-black px-3 py-1 rounded-r">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <div 
+  v-if="this.open" 
+  class="bg-gray-400 py-5 px-10 flex items-center 
+  justify-center transition ease-out duration-75">
+  
+   <input 
+   v-model="textSearch"
+   class="py-1 rounded-l px-3 w-full outline-none" 
+   type="text" placeholder="search ...">
+
+   <button 
+   @click="onSearch"
+   class="bg-black px-3 py-1 rounded-r">
+      <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      class="h-6 w-6 text-gray-100" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor">
         <path 
         stroke-linecap="round" 
         stroke-linejoin="round" 
@@ -11,8 +26,14 @@
         />
       </svg>
    </button>
+
    <button class="self-start pl-3" @click="$emit('close-search')">
-     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+     <svg 
+     xmlns="http://www.w3.org/2000/svg" 
+     class="h-6 w-6 text-black" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke="currentColor">
        <path 
        stroke-linecap="round" 
        stroke-linejoin="round" 
@@ -21,6 +42,7 @@
        />
      </svg>
    </button>
+
  </div>
 </template>
 
@@ -31,6 +53,15 @@ export default {
     open: {
       type: Boolean,
       required: true
+    }
+  },
+  data: () => ({
+    textSearch: ''
+  }),
+  methods: {
+    onSearch() {
+      console.log(this.textSearch)
+      this.textSearch = ''
     }
   }
 }
