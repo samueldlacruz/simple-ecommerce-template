@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="">
+  <div class="bg-gray-300">
    <mec-breadcrumb  :items="itemsBreadcrumb" divider=">"/>
   </div>
 
@@ -15,16 +15,19 @@
       velit vitae ab quia asperiores hic, praesentium dignissimos.</p>     
     </div>
   </div>
+  <mec-testimonials />
 </div>
 </template>
 
 <script>
-import MecBreadcrumb from '../components/shared/MecBreadcrumb';
+import MecBreadcrumb from '@/components/shared/MecBreadcrumb';
+import MecTestimonials from '@/components/MecTestimonials';
 
 export default {
   name:'About',
   components: {
-    MecBreadcrumb
+    MecBreadcrumb,
+    MecTestimonials
   },
   data: () => ({
   itemsBreadcrumb: [

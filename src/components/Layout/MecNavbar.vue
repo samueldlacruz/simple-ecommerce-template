@@ -56,7 +56,7 @@
           <router-link 
           :to="item.href"
           class="lg:p-4 py-3 px-0 block border-b-2 border-transparent 
-          hover:border-indigo-400 hover:text-indigo-500" 
+          hover:border-indigo-400 capitalize hover:text-indigo-500" 
           >{{ item.text }}</router-link>
 
         </li>
@@ -83,7 +83,7 @@ export default {
   data:() => ({
    companyName: 'House Store',
    navbarItems: [
-     {text: 'home', href:'/home'},
+     {text: 'home', href:'/'},
      {text: 'shop', href:'/shop'},
      {text: 'about', href:'/about'},
      {text: 'contact us', href:'/contact'},

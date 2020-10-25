@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-3 mx-auto">
+  <div class="mx-auto">
     <div 
      class="md:flex items-center 
      justify-around bg-blue-300 px-10 pt-20 pb-5">
@@ -80,7 +80,7 @@ export default {
     companyName: 'House Store',
     year: new Date().getFullYear().toString(),
     footerNavItems: [
-     {text: 'home', href:'/home'},
+     {text: 'home', href:'/'},
      {text: 'shop', href:'/shop'},
      {text: 'about', href:'/about'},
      {text: 'contact us', href:'/contact'},
