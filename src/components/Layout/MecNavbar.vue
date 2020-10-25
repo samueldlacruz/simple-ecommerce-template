@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import MecSearch from '@/components/MecSearch';
+import MecSearch from '../MecSearch';
 export default {
   name: 'MecNavbar',
   data() {

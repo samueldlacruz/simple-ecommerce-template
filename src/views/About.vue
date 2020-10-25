@@ -1,4 +1,9 @@
 <template>
+<div>
+  <div class="">
+   <mec-breadcrumb  :items="itemsBreadcrumb" divider=">"/>
+  </div>
+
   <div class="mx-auto container mt-5 md:flex items-center justify-between">
     <div class="mb-10 md:w-1/2">
       <img class="w-full shadow-2xl rounded" src="~@/assets/images/img-1.jpg" alt="img about">
@@ -10,10 +15,22 @@
       velit vitae ab quia asperiores hic, praesentium dignissimos.</p>     
     </div>
   </div>
+</div>
 </template>
 
 <script>
+import MecBreadcrumb from '../components/shared/MecBreadcrumb';
+
 export default {
-  name:'About'
+  name:'About',
+  components: {
+    MecBreadcrumb
+  },
+  data: () => ({
+  itemsBreadcrumb: [
+    {text: 'home', disabled: false, href: '/'},
+    {text: 'About', disabled: true, href: '#'},
+  ]  
+  })
 }
 </script>
