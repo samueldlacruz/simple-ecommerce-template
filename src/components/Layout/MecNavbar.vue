@@ -1,13 +1,24 @@
 <template>
  <div>
  <header class="lg:px-16 px-6 bg-gray-200 flex flex-wrap items-center lg:py-0 py-2">
-    <div class="flex-1 flex justify-between items-center">
-      <a href="#" class="text-lg font-bold">House Store</a>
+
+  <div class="flex-1 flex justify-between items-center">
+    <a href="#" class="text-lg font-bold">{{ companyName }}</a>
   </div>
+
   <div class="lg:order-2">
     <ul class="text-base flex items-center text-gray-700 md:py-1 lg:pt-0 ">
-      <li class="lg:p-4 py-3 px-0 inline-block cursor-pointer" @click="onOpenSearch()">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+      <li 
+       class="lg:p-4 py-3 px-0 inline-block cursor-pointer" 
+       @click="onOpenSearch()">
+        <svg 
+         xmlns="http://www.w3.org/2000/svg" 
+         fill="none" 
+         viewBox="0 0 24 24" 
+         stroke="currentColor"
+         class="h-6 w-6 text-gray-800" 
+          >
           <path 
           stroke-linecap="round" 
           stroke-linejoin="round" 
@@ -16,7 +27,9 @@
           />
         </svg>
       </li>
+
       <li class="px-2">|</li>
+
       <li class="lg:p-4 py-3 px-0 inline-block cursor-pointer pr-3 md:pr-1">
        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
          <path 
@@ -36,30 +49,47 @@
   <div class="hidden lg:flex lg:items-center lg:w-auto lg:order-1 w-full" id="menu">
     <nav>
       <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-500" href="#">Home</a></li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-500" href="#">Shop</a></li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-500" href="#">About</a></li>
-        <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-500 lg:mb-0 mb-2" href="#">Contact Us</a></li>
+        <li 
+         v-for="item in navbarItems"
+         :key="item.text">
+
+          <router-link 
+          :to="item.href"
+          class="lg:p-4 py-3 px-0 block border-b-2 border-transparent 
+          hover:border-indigo-400 hover:text-indigo-500" 
+          >{{ item.text }}</router-link>
+
+        </li>
       </ul>
     </nav>
   </div>
   </header>
-  <mec-search :open="this.openSearch" @close-search="onCloseSearch"/>
+
+  <mec-search 
+   :open="this.openSearch"
+   @close-search="onCloseSearch"/>
+
 </div>
 </template>
 
 <script>
 import MecSearch from '../MecSearch';
+
 export default {
   name: 'MecNavbar',
-  data() {
-    return {
-     openSearch: false
-    }
-  },
   components: {
     MecSearch
   },
+  data:() => ({
+   companyName: 'House Store',
+   navbarItems: [
+     {text: 'home', href:'/home'},
+     {text: 'shop', href:'/shop'},
+     {text: 'about', href:'/about'},
+     {text: 'contact us', href:'/contact'},
+   ],
+   openSearch: false
+  }),
   methods: {
     onOpenSearch(){
       this.openSearch = !this.openSearch
@@ -71,8 +101,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 #menu-toggle:checked + #menu {
   display: block;
 }
+
 </style>
