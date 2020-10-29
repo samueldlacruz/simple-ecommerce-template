@@ -5,12 +5,18 @@ module.exports = {
   },
   purge: [],
   theme: {
+    fontFamily: {
+      display: ['Merriweather','sans-serif'],
+      body: ['Open Sans', 'sans']
+    },
     extend: {
      backgroundImage: theme => ({
-     'testimonials': "url('~@/assets/images/testimonials.jpg')",
+     testimonials: "url('~@/assets/images/testimonials.jpg')",
      })
     },
   },
-  variants: {},
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'focus-within'],
+  },
   plugins: [],
 }

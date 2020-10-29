@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 py-5 flex flex-wrap">
+  <div class="px-5 font-body py-5 flex flex-wrap">
       <span 
       v-for="(item, index) in items" 
       :key="`${item.text}-${index}`"

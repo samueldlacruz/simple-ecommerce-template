@@ -1,47 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*==========================
- Scroll Snap Css
-===========================*/
-
-/*
-* Scroll Snap Type
-* values: x or y and mandatory or proximity
-*/
-.snap-x-mandatory {
- scroll-snap-type: x mandatory;
-}
-
-.snap-y-mandatory {
- scroll-snap-type: y mandatory;
-}
-
-.snap-x-proximity {
- scroll-snap-type: x proximity;
-}
-
-.snap-y-proximity {
- scroll-snap-type: x proximity;
-}
-
-/*
-* Scroll Snap Align 
-* values: end, start and center 
-*/
-
-/* Center */
-.snap-center {
- scroll-snap-align: center;
-}
-
-/* Start */
-.snap-start {
-  scroll-snap-align: start;
-}
-
-/* End */
-.snap-end {
-  scroll-snap-align: end;
+@layer utilities {
+  @responsive {
+    .snap-none {
+      scroll-snap-type: none;
+    }
+    .snap-x-mandatory {
+      scroll-snap-type: x mandatory;
+     }
+     
+     .snap-y-mandatory {
+      scroll-snap-type: y mandatory;
+     }
+     
+     .snap-x-proximity {
+      scroll-snap-type: x proximity;
+     }
+     
+     .snap-y-proximity {
+      scroll-snap-type: x proximity;
+     }
+     
+     .snap-center {
+      scroll-snap-align: center;
+     }
+     
+     .snap-start {
+       scroll-snap-align: start;
+     }
+     
+     .snap-end {
+       scroll-snap-align: end;
+     }     
+  }
 }

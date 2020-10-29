@@ -1,9 +1,14 @@
 <template>
  <div>
- <header class="lg:px-16 px-6 bg-gray-200 relative flex flex-wrap items-center lg:py-0 py-2">
+ <header class="lg:px-16 px-6 font-display bg-gray-200 relative flex flex-wrap items-center lg:py-0 py-2">
 
-  <div class="flex-1 flex justify-between items-center">
-    <a href="#" class="text-lg font-bold">{{ companyName }}</a>
+  <div class="flex-1 flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+    </svg>
+    <a href="#" class="ml-3 text-lg transform hover:translate-x-2 text-black font-bold hover:text-blue-500 transition duration-700 ease-out">
+      {{ companyName }}
+    </a>
   </div>
 
   <div class="lg:order-2">

@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto">
+  <div>
     <div 
-     class="md:flex items-center 
+     class="md:flex items-center font-display
      justify-around bg-gray-800 px-10 pt-20 pb-5">
       <div class="mb-4 text-blue-100">
 
@@ -9,7 +9,7 @@
          md:text-lg font-mono font-semibold">about us</h5>
         <p 
         class="py-2 md:pr-5 
-        leading-relaxed text-sm w-64">
+        leading-relaxed text-sm w-64 font-body">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
           Ratione quo vero dicta eius reprehenderit, sint excepturi
           quod amet perspiciatis magni.
@@ -62,7 +62,7 @@
 
     </div><!--Main Footer-->
 
-    <div class="bg-gray-900 text-blue-100 px-10 py-5">
+    <div class="bg-gray-900 font-body text-blue-100 px-10 py-5">
       <p>
         Copyright &copy; 
         <span class="text-blue-400">{{ companyName }} </span>

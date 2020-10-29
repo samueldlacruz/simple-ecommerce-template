@@ -2,7 +2,8 @@
    <div>
     <div 
      ref="slider"
-     class="flex max-w-3xl mx-auto mt-5 overflow-scroll overflow-x-hidden overflow-y-hidden snap-x-mandatory">
+     class="flex max-w-3xl mx-auto mt-5 overflow-scroll 
+     overflow-x-hidden overflow-y-hidden snap-x-mandatory">
        <testimonial-card 
         v-for="(item, index) in testimonials" 
         :key="index" 
