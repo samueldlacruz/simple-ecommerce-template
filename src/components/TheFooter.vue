@@ -2,7 +2,7 @@
   <div class="mx-auto">
     <div 
      class="md:flex items-center 
-     justify-around bg-blue-300 px-10 pt-20 pb-5">
+     justify-around bg-gray-800 px-10 pt-20 pb-5">
       <div class="mb-4 text-blue-100">
 
         <h5 class="text-white uppercase text-sm
@@ -20,7 +20,7 @@
           v-for="socialItem in socialMediaItems"
           :key="socialItem.text"
           class="mr-3 p-2 transition ease-in-out duration-700 
-          cursor-pointer hover:bg-gray-800 rounded-full">
+          cursor-pointer hover:bg-blue-400 rounded-full">
            <a :href="socialItem.href">
             <img 
              class="h-6 w-6" 
@@ -40,7 +40,7 @@
           class="pt-2">
             <router-link 
             :to="navItem.href"
-            class="hover:text-indigo-500 transition ease-out duration-200"
+            class="hover:text-blue-400 uppercase transition ease-out duration-200"
             >{{ navItem.text }}</router-link> 
           </li>
         </ul>
@@ -56,16 +56,16 @@
         type="text" placeholder="Your email">
 
         <button 
-        class="px-3 py-2 bg-indigo-500
+        class="px-3 py-2 bg-blue-400
         text-white md:rounded-r">Join</button>
       </div><!--Newsletter-->
 
     </div><!--Main Footer-->
 
-    <div class="bg-gray-200 px-10 py-5">
+    <div class="bg-gray-900 text-blue-100 px-10 py-5">
       <p>
         Copyright &copy; 
-        <span class="text-indigo-500">{{ companyName }} </span>
+        <span class="text-blue-400">{{ companyName }} </span>
         {{ year }}. All Right Reserved.
      </p>
     </div><!--Copyright-->
@@ -74,8 +74,9 @@
 </template>
 
 <script>
+
 export default {
-  name: "MecFooter",
+  name: "TheFooter",
   data: () => ({
     companyName: 'House Store',
     year: new Date().getFullYear().toString(),

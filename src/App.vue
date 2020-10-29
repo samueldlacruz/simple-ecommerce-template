@@ -1,20 +1,20 @@
 <template>
   <div>
-    <mec-navbar />
+    <the-navbar />
     <router-view/>
-    <mec-footer />
+    <the-footer />
   </div>
 </template>
 
 <script>
 
-import MecNavbar from './components/Layout/MecNavbar';
-import MecFooter from './components/Layout/MecFooter';
+import TheNavbar from '@/components/TheNavbar';
+import TheFooter from '@/components/TheFooter';
 
 export default {
   components:{
-    MecNavbar,
-    MecFooter
+    TheNavbar,
+    TheFooter
   }
 }
 </script>

@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*==========================
+ Scroll Snap Css
+===========================*/
+
+/*
+* Scroll Snap Type
+* values: x or y and mandatory or proximity
+*/
+.snap-x-mandatory {
+ scroll-snap-type: x mandatory;
+}
+
+.snap-y-mandatory {
+ scroll-snap-type: y mandatory;
+}
+
+.snap-x-proximity {
+ scroll-snap-type: x proximity;
+}
+
+.snap-y-proximity {
+ scroll-snap-type: x proximity;
+}
+
+/*
+* Scroll Snap Align 
+* values: end, start and center 
+*/
+
+/* Center */
+.snap-center {
+ scroll-snap-align: center;
+}
+
+/* Start */
+.snap-start {
+  scroll-snap-align: start;
+}
+
+/* End */
+.snap-end {
+  scroll-snap-align: end;
+}

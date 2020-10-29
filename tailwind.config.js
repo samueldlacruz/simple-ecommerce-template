@@ -5,7 +5,11 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+     backgroundImage: theme => ({
+     'testimonials': "url('~@/assets/images/testimonials.jpg')",
+     })
+    },
   },
   variants: {},
   plugins: [],

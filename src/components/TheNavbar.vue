@@ -1,6 +1,6 @@
 <template>
  <div>
- <header class="lg:px-16 px-6 bg-gray-200 flex flex-wrap items-center lg:py-0 py-2">
+ <header class="lg:px-16 px-6 bg-gray-200 relative flex flex-wrap items-center lg:py-0 py-2">
 
   <div class="flex-1 flex justify-between items-center">
     <a href="#" class="text-lg font-bold">{{ companyName }}</a>
@@ -17,7 +17,7 @@
          fill="none" 
          viewBox="0 0 24 24" 
          stroke="currentColor"
-         class="h-6 w-6 text-gray-800" 
+         class="h-6 w-6 text-gray-800 transition ease-out duration-100 hover:text-blue-400" 
           >
           <path 
           stroke-linecap="round" 
@@ -31,7 +31,12 @@
       <li class="px-2">|</li>
 
       <li class="lg:p-4 py-3 px-0 inline-block cursor-pointer pr-3 md:pr-1">
-       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <svg 
+       xmlns="http://www.w3.org/2000/svg" 
+       class="h-6 w-6 text-gray-800 transition ease-out duration-100 hover:text-blue-400"  
+       fill="none" 
+       viewBox="0 0 24 24" 
+       stroke="currentColor">
          <path 
          stroke-linecap="round" 
          stroke-linejoin="round" 
@@ -54,31 +59,34 @@
          :key="item.text">
 
           <router-link 
+          exact-active-class="text-blue-500 border-blue-400"
           :to="item.href"
           class="lg:p-4 py-3 px-0 block border-b-2 border-transparent 
-          hover:border-indigo-400 capitalize hover:text-indigo-500" 
+          hover:border-blue-400 capitalize hover:text-blue-500" 
           >{{ item.text }}</router-link>
 
         </li>
       </ul>
     </nav>
   </div>
+
+  <the-search 
+   :open="this.openSearch"
+   @close-search="onCloseSearch"/>  
   </header>
 
-  <mec-search 
-   :open="this.openSearch"
-   @close-search="onCloseSearch"/>
 
 </div>
 </template>
 
 <script>
-import MecSearch from '../MecSearch';
+
+import TheSearch from './TheSearch';
 
 export default {
-  name: 'MecNavbar',
+  name: 'TheNavbar',
   components: {
-    MecSearch
+    TheSearch
   },
   data:() => ({
    companyName: 'House Store',

@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <div class="h-screen"></div>
-   <mec-testimonials />
+   <testimonials />
   </div>
 </template>
 
 <script>
-import MecTestimonials from '../components/MecTestimonials';
+import Testimonials from '@/components/Testimonials/Testimonials';
 
 export default {
   name: 'Home',
   components: {
-   MecTestimonials
+   Testimonials
   }
 }
 </script>

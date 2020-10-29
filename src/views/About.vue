@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="bg-gray-300">
-   <mec-breadcrumb  :items="itemsBreadcrumb" divider=">"/>
+   <breadcrumb  :items="itemsBreadcrumb" divider=">"/>
   </div>
 
-  <div class="mx-auto container mt-5 md:flex items-center justify-between">
+  <div class="mx-auto h-screen container mt-5 md:flex items-center justify-between">
     <div class="mb-10 md:w-1/2">
       <img class="w-full shadow-2xl rounded" src="~@/assets/images/img-1.jpg" alt="img about">
     </div>
@@ -15,19 +15,19 @@
       velit vitae ab quia asperiores hic, praesentium dignissimos.</p>     
     </div>
   </div>
-  <mec-testimonials />
+  <testimonials />
 </div>
 </template>
 
 <script>
-import MecBreadcrumb from '@/components/shared/MecBreadcrumb';
-import MecTestimonials from '@/components/MecTestimonials';
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import Testimonials from '@/components/Testimonials/Testimonials';
 
 export default {
   name:'About',
   components: {
-    MecBreadcrumb,
-    MecTestimonials
+    Breadcrumb,
+    Testimonials
   },
   data: () => ({
   itemsBreadcrumb: [

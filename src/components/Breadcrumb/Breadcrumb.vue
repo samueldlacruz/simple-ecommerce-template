@@ -7,7 +7,7 @@
         <router-link 
         :to="item.href"
         class="capitalize text-lg text-black font-semibold transition duration-500 ease-out"
-        :class="[item.disabled ? 'text-gray-700 cursor-text' : 'hover:text-indigo-500']" 
+        :class="[item.disabled ? 'text-gray-700 cursor-text' : 'hover:text-blue-400']" 
         >
          {{item.text}}
         </router-link> 
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
 export default {
    name: 'MecBreadcrumb',
    props: {
