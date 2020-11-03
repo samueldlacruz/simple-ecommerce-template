@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Merriweather','sans-serif'],
-      body: ['Open Sans', 'sans']
+      body: ['Oswald', 'sans']
     },
     extend: {
      backgroundImage: theme => ({
