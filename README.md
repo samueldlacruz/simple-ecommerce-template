@@ -2,7 +2,10 @@
 
 > simple ecommerce templete, created with: tailwindcss and vue
 
+![screenshot](screenshot.png)
+
 >**note:** in progress
+
 
 ## Project setup
 ```
