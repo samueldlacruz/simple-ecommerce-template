@@ -56,7 +56,7 @@
 
 <script>
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
-import ContactDetailsCard from '@/components/ContactDetails/ContactDetailsCard';
+import ContactDetailsCard from '@/components/Contact/ContactDetailsCard';
 export default {
   name: 'contact',
   components: {
