@@ -1,4 +1,8 @@
-# micro-ecommerce-frontend
+# micro-ecommerce-template
+
+> simple ecommerce templete, created with: tailwindcss and vue
+
+>**note:** in progress
 
 ## Project setup
 ```
