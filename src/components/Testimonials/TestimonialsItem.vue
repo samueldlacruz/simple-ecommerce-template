@@ -11,19 +11,19 @@
        />
     </div>
    
-    <div class="mt-5 flex items-center justify-center">
-    <span 
-      @click="prevItemSlider()"
-      class="w-6 h-6 mr-5 rounded-full text-center font-semibold text-gray-800 
-      bg-white hover:bg-opacity-100 bg-opacity-75 cursor-pointer">
-      &lt;
-    </span>
-    <span 
-      @click="nextItemSlider()"
-      class="w-6 h-6 rounded-full text-center font-semibold text-gray-800
-      bg-white hover:bg-opacity-100 bg-opacity-75 cursor-pointer">
-      &gt;
-    </span>
+    <div class="mt-4 flex items-center justify-center">
+      <span 
+        @click="prevItemSlider()"
+        class="w-10 h-10 flex items-center justify-center mr-5 rounded-full text-center font-bold text-gray-800 
+        bg-white hover:bg-opacity-100 bg-opacity-75 cursor-pointer">
+        &lt;
+      </span>
+      <span 
+        @click="nextItemSlider()"
+        class="w-10 h-10 flex items-center justify-center rounded-full text-center font-bold text-gray-800
+        bg-white hover:bg-opacity-100 bg-opacity-75 cursor-pointer">
+        &gt;
+      </span>
     </div>
   </div>
 </template>
